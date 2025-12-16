@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "SCRIBE — URL to PDF Converter",
+  "version": "1.0",
+  "description": "Convert a selected portion of any webpage into a PDF.",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected_libs/html2pdf.bundle.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

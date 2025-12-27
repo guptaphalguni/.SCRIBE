@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SCRIBE Popup</title>
-    <link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8">
+  <title>SCRIBE</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
 
-    <h2>SCRIBE</h2>
+  <div class="container">
+    <h1 class="title">SCRIBE</h1>
+    <p class="tagline">Converts URL to PDF</p>
 
-    <input id="urlInput" type="text" placeholder="Loading current tab URL..." />
-
+    <button id="selectBtn">Select Area</button>
     <button id="convertBtn">Convert to PDF</button>
+    <button id="clearBtn">Clear</button>
 
-    <script src="popup.js"></script>
+    <div id="status">Ready.</div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>

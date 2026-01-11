@@ -9,16 +9,16 @@
             return;
         }
 
-        // Clone selected range
+        
         const range = selection.getRangeAt(0).cloneContents();
 
-        // Create a container to hold selected content
+       
         const container = document.createElement("div");
         container.id = "scribe-selected-content";
         container.style.padding = "20px";
         container.appendChild(range);
 
-        // Convert selected HTML to PDF
+       
         html2pdf()
             .from(container)
             .set({
